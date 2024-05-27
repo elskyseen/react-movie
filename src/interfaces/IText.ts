@@ -1,5 +1,5 @@
 interface IText {
-  text: string;
+  text?: string;
 }
 
 

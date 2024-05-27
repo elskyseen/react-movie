@@ -1,4 +1,7 @@
+import IButton from "./IButton";
+
 interface ICard {
+  id: string;
   poster_path: string;
   title: string;
   release_date: string;

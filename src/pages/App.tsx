@@ -24,6 +24,9 @@ const App = () => {
     queryFn: getTopRated,
   });
 
+  const isLoading: boolean =
+    playMovies.isLoading || popular.isLoading || topMovies.isLoading;
+
   return (
     <div className="flex items-center flex-col">
       {/* <Navbar /> */}
@@ -33,15 +36,15 @@ const App = () => {
           isMax={true}
           text="Sekumpulan film teratas yang bisa kamu lihat secara gratis, puas nonton dimanapun kapanpun tanpa harus memikirkan waktu yang pas buat nonton"
         />
-        <Button text="view movies" />
+        <Button link="#" text="view movies" />
       </div>
-      {playMovies.isLoading || popular.isLoading || topMovies.isLoading ? (
+      {isLoading ? (
         <Loading />
       ) : (
         <>
-          <MoviesLayouts title="list movies" data={playMovies.data} />
-          <MoviesLayouts title="popular movies" data={popular.data} />
-          <MoviesLayouts title="top movies" data={topMovies.data} />
+          <MoviesLayouts categorie="now_playing" title="list movies" data={playMovies.data} />
+          <MoviesLayouts categorie="popular" title="popular movies" data={popular.data} />
+          <MoviesLayouts categorie="top_rated" title="top movies" data={topMovies.data} />
         </>
       )}
       <Footer />

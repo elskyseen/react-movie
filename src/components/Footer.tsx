@@ -1,5 +1,4 @@
 import IText from "../interfaces/IText";
-import Button from "./Button";
 import Description from "./Description";
 import Heading from "./Heading";
 import Input from "./Input";

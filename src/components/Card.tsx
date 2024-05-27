@@ -10,6 +10,7 @@ const Card: React.FC<ICard> = ({
   release_date,
   vote_average,
   original_language,
+  id,
 }) => {
   return (
     <div className="col-span-1 flex flex-col justify-between p-4 rounded border-2 border-primary">
@@ -26,7 +27,7 @@ const Card: React.FC<ICard> = ({
           <Tag text={vote_average} isAbsolute={false} />
         </div>
       </div>
-      <Button text="view detail" />
+      <Button link={`/movies/detail/${id}`} text="view detail" />
     </div>
   );
 };

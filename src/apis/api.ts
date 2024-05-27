@@ -15,4 +15,9 @@ const getTopRated = async () => {
   return data.results;
 };
 
-export { getPlayingMovies, getPopular, getTopRated };
+const getDetailMovie = async (id: string) => {
+  const { data } = await axiosInstance.get(`${id}`);
+  return data;
+};
+
+export { getPlayingMovies, getPopular, getTopRated, getDetailMovie };
