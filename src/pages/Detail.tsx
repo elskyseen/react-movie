@@ -1,6 +1,4 @@
 import { useParams } from "react-router-dom";
-import dummy from "../assets/dummy.jpg";
-import { axiosInstance } from "../config/axios";
 import { useQuery } from "@tanstack/react-query";
 import { getDetailMovie } from "../apis/api";
 import Tag from "../components/Tag";
@@ -19,19 +17,19 @@ const Detail = () => {
   });
 
   return (
-    <div className="w-full min-h-dvh grid grid-cols-12 px-40 justify-center items-center gap-10">
+    <div className="w-full min-h-dvh grid grid-cols-1 lg:grid-cols-12 py-10 px-4 lg:px-40 justify-center items-center gap-10">
       {isLoading ? (
         <Loading />
       ) : (
         <>
-          <div className="col-span-5">
+          <div className="col-span-1 lg:col-span-5">
             <img
               src={`${baseImage}${data.poster_path}`}
               alt="movie-image"
               className="w-full"
             />
           </div>
-          <div className="col-span-7 text-white flex flex-col gap-2">
+          <div className="col-span-1 lg:col-span-7 text-white flex flex-col gap-2">
             <div className="flex gap-4">
               {data?.genres.map((genre: { name: string }, index: number) => {
                 return <Tag isAbsolute={false} text={genre.name} key={index} />;
@@ -56,7 +54,7 @@ const Detail = () => {
             </div>
             <div className="flex gap-2">
               <p className="capitalize">companies:</p>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
                 {data?.production_companies.map(
                   (companie: { name: string }, index: number) => {
                     return (

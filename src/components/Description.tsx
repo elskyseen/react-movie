@@ -5,7 +5,7 @@ const Description: React.FC<IDescription> = ({ text, isMax }) => {
   return (
     <div
       className={
-        (isMax && "max-w-md ") + "text-xl font-semibold text-white mb-4"
+        (isMax && "max-w-md ") + "text-base lg:text-xl font-semibold text-white mb-4"
       }
     >
       {text}

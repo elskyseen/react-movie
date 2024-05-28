@@ -27,14 +27,14 @@ const AllMovies = () => {
   });
 
   return (
-    <div className="w-full flex flex-col justify-center px-20">
-      <h1 className="my-20 text-center text-primary text-7xl font-semibold">
+    <div className="w-full flex flex-col justify-center px-4 lg:px-20">
+      <h1 className="my-8 lg:my-20 text-center text-primary text-3xl lg:text-7xl font-semibold">
         All Movies
       </h1>
       {isLoading ? (
         <Loading />
       ) : (
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
           {data?.map((movie: ICard, index: number) => {
             return (
               <Card

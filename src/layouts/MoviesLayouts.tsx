@@ -15,14 +15,14 @@ const MoviesLayouts: React.FC<IMovieLayout> = ({ title, data, categorie }) => {
   }, []);
 
   return (
-    <div className="px-40 w-full flex flex-col justify-center items-start mb-36">
+    <div className="px-4 lg:px-40 w-full flex flex-col justify-center items-start mb-36">
       <div className="w-full mb-6 flex justify-between items-center">
-        <h1 className="text-primary text-4xl capitalize font-semibold mb-6">
+        <h1 className="text-primary text-xl lg:text-4xl capitalize font-semibold mb-6">
           {title}
         </h1>
         <Button link={`/movies/${categorie}`} text="view all" />
       </div>
-      <div className="w-full grid grid-cols-4 gap-4">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-4 gap-4">
         {movies?.map((movie, index) => {
           return (
             <Card

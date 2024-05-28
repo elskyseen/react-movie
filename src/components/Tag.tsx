@@ -6,10 +6,10 @@ const Tag: React.FC<ITag> = ({ text, isAbsolute }) => {
     <div
       className={
         (isAbsolute && "absolute top-2 right-2 ") +
-        "py-1 px-3 rounded text-white bg-primary font-semibold max-w-max"
+        "py-2 px-3 text-xs lg:text-base rounded text-white bg-primary font-semibold max-w-max flex items-center"
       }
     >
-      {text}
+      <p>{text}</p>
     </div>
   );
 };

@@ -2,7 +2,6 @@ import { useQuery } from "@tanstack/react-query";
 import Button from "../components/Button";
 import Description from "../components/Description";
 import Heading from "../components/Heading";
-import Navbar from "../components/Navbar";
 import { getPlayingMovies, getPopular, getTopRated } from "../apis/api";
 import MoviesLayouts from "../layouts/MoviesLayouts";
 import Loading from "../components/Loading";
@@ -29,8 +28,7 @@ const App = () => {
 
   return (
     <div className="flex items-center flex-col">
-      {/* <Navbar /> */}
-      <div className="w-full min-h-[80vh] flex flex-col items-start justify-center px-40 bg-hero-image bg-center bg-cover bg-no-repeat">
+      <div className="w-full min-h-[80vh] flex flex-col items-start justify-center px-4 lg:px-40 bg-hero-image bg-center bg-cover bg-no-repeat">
         <Heading text="tonton serunya tanpa batas" />
         <Description
           isMax={true}
